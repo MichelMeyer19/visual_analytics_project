@@ -1,0 +1,2327 @@
+<?xml version="1.0" ?>
+<AlteryxDocument yxmdVer="2021.4">
+  <Nodes>
+    <Node ToolID="1">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="-424.5254237288135" y="259.54237288135596" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>Helsinki total income and Disposable income</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <File OutputFileName="" RecordLimit="0" SearchSubDirs="False" FileFormat="25">d95addf5-e2d4-4f2b-bd00-b83036dab164|||`001_118w_2020$`</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="2">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="173" y="258.57894736842104" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Municipality" selected="True" />
+            <SelectField field="1. EARNED INCOME, mean" selected="True" rename="Income pre-tax mean" />
+            <SelectField field="8. DISPOSABLE CASH INCOME, mean" selected="True" rename="mean disposable income" />
+            <SelectField field="Disposable cash income,  median" selected="True" rename="median disposable income" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="3">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="-430.2564102564103" y="169" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>Municipalities and post_code</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <File OutputFileName="" RecordLimit="0" SearchSubDirs="False" FileFormat="25">b47a47a7-6bbd-4bf6-95a9-d65ad616fb16|||`district_matrix$`</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="4">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="-235" y="169.57894736842107" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="5">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="-238" y="95.57894736842107" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="6">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="-113.80952380952385" y="127" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Post_code" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="post_code" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_F1" selected="True" input="Left_" />
+                <SelectField field="Left_hotel_name" selected="True" input="Left_" />
+                <SelectField field="Left_google_rating" selected="True" input="Left_" />
+                <SelectField field="Left_hotel_star_rating" selected="True" input="Left_" />
+                <SelectField field="Left_lon" selected="True" input="Left_" />
+                <SelectField field="Left_lat" selected="True" input="Left_" />
+                <SelectField field="Left_adress" selected="True" input="Left_" />
+                <SelectField field="Left_check_in" selected="True" input="Left_" />
+                <SelectField field="Left_pricing" selected="True" input="Left_" />
+                <SelectField field="Left_highlights" selected="True" input="Left_" />
+                <SelectField field="Left_website" selected="True" input="Left_" />
+                <SelectField field="Left_phone" selected="True" input="Left_" />
+                <SelectField field="Left_location_rating" selected="True" input="Left_" />
+                <SelectField field="Left_deteiled_google_reviews" selected="True" input="Left_" />
+                <SelectField field="Left_hotel_description" selected="True" input="Left_" />
+                <SelectField field="Left_attributes" selected="True" input="Left_" />
+                <SelectField field="Left_search_string" selected="True" input="Left_" />
+                <SelectField field="Left_Post_code" selected="True" input="Left_" />
+                <SelectField field="Right_post_code" selected="False" rename="Right_post_code" input="Right_" />
+                <SelectField field="Right_district" selected="True" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="7">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="160" y="127.57894736842107" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>Capital = "Helsinki"</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="&quot;Helsinki&quot;" value="" field="Capital" type="V_String" size="2147483647" />
+          </FormulaFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="8">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="-326" y="94.57894736842107" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Field>adress</Field>
+          <RegExExpression value="(\d{5})" />
+          <CaseInsensitve value="True" />
+          <Method>ParseComplex</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="False" />
+            <RootName>adress</RootName>
+            <NumFields value="3" />
+            <ErrorHandling>Warn</ErrorHandling>
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="Post_code" type="V_String" size="255" />
+          </ParseComplex>
+          <Match>
+            <Field>adress_Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="9">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="-11.571428571428612" y="127" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Field>district</Field>
+          <RegExExpression value="([^\s]+)" />
+          <CaseInsensitve value="True" />
+          <Method>ParseComplex</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="False" />
+            <RootName>district</RootName>
+            <NumFields value="3" />
+            <ErrorHandling>Warn</ErrorHandling>
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="municipality_final" type="V_String" size="255" />
+          </ParseComplex>
+          <Match>
+            <Field>district_Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="10">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="472" y="173.57894736842107" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="district" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Municipality" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="11">
+      <EngineSettings Macro="Cleanse.yxmc" />
+      <GuiSettings Plugin="Cleanse.yxmc">
+        <Position x="247" y="127.57894736842107" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"F1","hotel_name","google_rating","hotel_star_rating","lon","lat","adress","check_in","pricing","highlights","website","phone","location_rating","deteiled_google_reviews","hotel_description","attributes","search_string","prices2","prices3","prices4","prices5","prices6","prices7","Resturant","Free Wifi","Handicap-friendly","Breakfast","Pool","Allows Pets","Climate Control","Fitness Center","check_in1","check_in2","Post_code","district","RegExOut1","Country"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">True</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="12">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="316" y="127.57894736842107" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="F1" selected="True" />
+            <SelectField field="hotel_name" selected="True" />
+            <SelectField field="google_rating" selected="True" />
+            <SelectField field="hotel_star_rating" selected="True" />
+            <SelectField field="lon" selected="True" />
+            <SelectField field="lat" selected="True" />
+            <SelectField field="adress" selected="True" />
+            <SelectField field="check_in" selected="True" />
+            <SelectField field="pricing" selected="True" />
+            <SelectField field="highlights" selected="True" />
+            <SelectField field="website" selected="True" />
+            <SelectField field="phone" selected="True" />
+            <SelectField field="location_rating" selected="True" />
+            <SelectField field="deteiled_google_reviews" selected="True" />
+            <SelectField field="hotel_description" selected="True" />
+            <SelectField field="attributes" selected="True" />
+            <SelectField field="search_string" selected="True" />
+            <SelectField field="Post_code" selected="True" />
+            <SelectField field="district" selected="True" />
+            <SelectField field="Country" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="14">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="328" y="257.05882352941177" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>Capital = "Helsinki"
+Income pre-tax mean = [Income pre-tax mean]*7.44
+mean dispo...</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="&quot;Helsinki&quot;" value="" field="Capital" type="V_WString" size="1073741823" />
+            <FormulaField expression="[Income pre-tax mean]*7.44" value="" field="Income pre-tax mean" type="Double" size="8" />
+            <FormulaField expression="[mean disposable income]*7.44" value="" field="mean disposable income" type="Double" size="8" />
+            <FormulaField expression="[median disposable income]*7.44" value="" field="median disposable income" type="Double" size="8" />
+          </FormulaFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="-428" y="94.57894736842107" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File OutputFileName="" RecordLimit="0" SearchSubDirs="False" FileFormat="25">b11a9cb3-13f7-46d1-9ee7-bd4db37c7e7b|||`data$`</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>datalist_helsinki</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="16">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="-422.1515151515151" y="611.5757575757575" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>Total and disposable average income for denmark.xlsx</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <File OutputFileName="" RecordLimit="0" SearchSubDirs="False" FileFormat="0">a46a3e75-7e53-4416-894f-b0ec64f9fe57</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <Delimeter>,</Delimeter>
+            <HeaderRow>True</HeaderRow>
+            <FieldLen>254</FieldLen>
+            <ImportLine>1</ImportLine>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <IgnoreErrors>False</IgnoreErrors>
+            <CodePage>28591</CodePage>
+            <AllowShareWrite>False</AllowShareWrite>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <SingleThreadRead>False</SingleThreadRead>
+          </FormatSpecificOptions>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="17">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="172" y="611.578947368421" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="1" selected="True" rename="Municipality" />
+            <SelectField field="2" selected="False" rename="Total" />
+            <SelectField field="3" selected="True" rename="Income pre-tax mean" />
+            <SelectField field="4" selected="False" rename="Average disposable income" />
+            <SelectField field="Average disposable income" selected="True" rename="mean disposable income" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="18">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="-422.9411764705883" y="513.3529411764705" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>district names denmark</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <File OutputFileName="" RecordLimit="0" SearchSubDirs="False" FileFormat="25">8289d5db-67d0-41e9-b23b-e1450c49c179|||`district_matrix$`</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="19">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="-237.9411764705883" y="514.3529411764705" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="20">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="-232" y="400.17647058823525" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="21">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="-107.05882352941194" y="462.6470588235294" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Post_code" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="post_code" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_F1" selected="True" input="Left_" />
+                <SelectField field="Left_hotel_name" selected="True" input="Left_" />
+                <SelectField field="Left_google_rating" selected="True" input="Left_" />
+                <SelectField field="Left_hotel_star_rating" selected="True" input="Left_" />
+                <SelectField field="Left_lon" selected="True" input="Left_" />
+                <SelectField field="Left_lat" selected="True" input="Left_" />
+                <SelectField field="Left_adress" selected="True" input="Left_" />
+                <SelectField field="Left_check_in" selected="True" input="Left_" />
+                <SelectField field="Left_pricing" selected="True" input="Left_" />
+                <SelectField field="Left_highlights" selected="True" input="Left_" />
+                <SelectField field="Left_website" selected="True" input="Left_" />
+                <SelectField field="Left_phone" selected="True" input="Left_" />
+                <SelectField field="Left_location_rating" selected="True" input="Left_" />
+                <SelectField field="Left_deteiled_google_reviews" selected="True" input="Left_" />
+                <SelectField field="Left_hotel_description" selected="True" input="Left_" />
+                <SelectField field="Left_attributes" selected="True" input="Left_" />
+                <SelectField field="Left_search_string" selected="True" input="Left_" />
+                <SelectField field="Left_Post_code" selected="True" input="Left_" />
+                <SelectField field="Right_post_code" selected="False" rename="Right_post_code" input="Right_" />
+                <SelectField field="Right_district" selected="True" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="22">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="89" y="458.7058823529412" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>Capital = "Copenhagen"
+municipality_final = IF Contains("Copenhagen", [municipal...</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="&quot;Copenhagen&quot;" value="" field="Capital" type="V_String" size="2147483647" />
+            <FormulaField expression="IF Contains(&quot;Copenhagen&quot;, [municipality_final]) THEN Replace(&quot;Copenhagen&quot;, [municipality_final], &quot;København&quot;) ELSE [municipality_final] &#xA;ENDIF" value="" field="municipality_final" type="V_String" size="255" />
+          </FormulaFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="23">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="-322" y="400.17647058823525" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Field>adress</Field>
+          <RegExExpression value="(\d{4})" />
+          <CaseInsensitve value="True" />
+          <Method>ParseComplex</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="False" />
+            <RootName>adress</RootName>
+            <NumFields value="3" />
+            <ErrorHandling>Warn</ErrorHandling>
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="Post_code" type="V_String" size="255" />
+          </ParseComplex>
+          <Match>
+            <Field>adress_Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="24">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="4" y="459.7058823529412" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Field>district</Field>
+          <RegExExpression value="([^\s]+)" />
+          <CaseInsensitve value="True" />
+          <Method>ParseComplex</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="False" />
+            <RootName>district</RootName>
+            <NumFields value="3" />
+            <ErrorHandling>Warn</ErrorHandling>
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="municipality_final" type="V_String" size="255" />
+          </ParseComplex>
+          <Match>
+            <Field>district_Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="25">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="488" y="502.57894736842104" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Municipality" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Municipality" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Municipality" selected="True" rename="Right_Municipality" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="26">
+      <EngineSettings Macro="Cleanse.yxmc" />
+      <GuiSettings Plugin="Cleanse.yxmc">
+        <Position x="-27" y="611.578947368421" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"Field_1","Field_2","Municipality","1 Disposable income (2+30-31-32-35)","2 Pre-tax Income, total (3+7+22+26+29)","3 Primary income (4+5+6)"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">True</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="27">
+      <EngineSettings Macro="Cleanse.yxmc" />
+      <GuiSettings Plugin="Cleanse.yxmc">
+        <Position x="181" y="457.7058823529412" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"F1","hotel_name","google_rating","hotel_star_rating","lon","lat","adress","check_in","pricing","highlights","website","phone","location_rating","deteiled_google_reviews","hotel_description","attributes","search_string","prices2","prices3","prices4","prices5","prices6","prices7","Resturant","Free Wifi","Handicap-friendly","Breakfast","Pool","Allows Pets","Climate Control","Fitness Center","check_in1","check_in2","Post_code","district","RegExOut1","Country"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">True</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="28">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="303" y="456.7058823529412" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="F1" selected="True" />
+            <SelectField field="hotel_name" selected="True" />
+            <SelectField field="google_rating" selected="True" />
+            <SelectField field="hotel_star_rating" selected="True" />
+            <SelectField field="lon" selected="True" />
+            <SelectField field="lat" selected="True" />
+            <SelectField field="adress" selected="True" />
+            <SelectField field="check_in" selected="True" />
+            <SelectField field="pricing" selected="True" />
+            <SelectField field="highlights" selected="True" />
+            <SelectField field="website" selected="True" />
+            <SelectField field="phone" selected="True" />
+            <SelectField field="location_rating" selected="True" />
+            <SelectField field="deteiled_google_reviews" selected="True" />
+            <SelectField field="hotel_description" selected="True" />
+            <SelectField field="attributes" selected="True" />
+            <SelectField field="search_string" selected="True" />
+            <SelectField field="Post_code" selected="True" />
+            <SelectField field="municipality_final" selected="True" rename="Municipality" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="29">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="-134" y="611.578947368421" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Field>Alle;Total;Average income for people of group (kr.);Disposalbe income for people DKK;;;;</Field>
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName />
+          <Delimeters value=";" />
+          <NumFields value="4" />
+          <Flags value="0" />
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="30">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="71" y="611.578947368421" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Field>4</Field>
+          <RegExExpression value="(\d*)" />
+          <CaseInsensitve value="True" />
+          <Method>ParseComplex</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="False" />
+            <RootName>4</RootName>
+            <NumFields value="3" />
+            <ErrorHandling>Warn</ErrorHandling>
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="Average disposable income" type="V_WString" size="254" />
+          </ParseComplex>
+          <Match>
+            <Field>4_Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="-419" y="400.17647058823525" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File OutputFileName="" RecordLimit="0" SearchSubDirs="False" FileFormat="25">33e41652-c9ff-48d5-b6f0-dd52c8be6b2c|||`data$`</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>datalist_copenhagen</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="33">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="-427.57575757575756" y="911" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>Municipalities in Sweden</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <File OutputFileName="" RecordLimit="0" SearchSubDirs="False" FileFormat="25">a6afe3b5-40ee-40f4-b4f1-aacf35380ce7|||`district_matrix$`</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="34">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="-198.54545454545456" y="911.5151515151515" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="post_code" selected="True" />
+            <SelectField field="district" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="35">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="-194.61797752808985" y="783" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="adress1" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="36">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="-105" y="835" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Post_code" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="post_code" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_post_code" selected="True" rename="Right_post_code" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="37">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="204" y="835.578947368421" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>Capital = "Stockholm"</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="&quot;Stockholm&quot;" value="" field="Capital" type="V_String" size="2147483647" />
+          </FormulaFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="39">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="488" y="901.578947368421" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Municipality" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Municipality" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Municipality" selected="True" rename="Right_Municipality" input="Right_" />
+                <SelectField field="Left_district" selected="False" input="Left_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="40">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="363" y="835.578947368421" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="F1" selected="True" />
+            <SelectField field="hotel_name" selected="True" />
+            <SelectField field="google_rating" selected="True" />
+            <SelectField field="hotel_star_rating" selected="True" />
+            <SelectField field="lat" selected="True" rename="lon" />
+            <SelectField field="lon" selected="True" rename="lat" />
+            <SelectField field="adress" selected="True" />
+            <SelectField field="check_in" selected="True" />
+            <SelectField field="pricing" selected="True" />
+            <SelectField field="highlights" selected="True" />
+            <SelectField field="website" selected="True" />
+            <SelectField field="phone" selected="True" />
+            <SelectField field="location_rating" selected="True" />
+            <SelectField field="deteiled_google_reviews" selected="True" />
+            <SelectField field="hotel_description" selected="True" />
+            <SelectField field="attributes" selected="True" />
+            <SelectField field="search_string" selected="True" />
+            <SelectField field="Post_code" selected="True" />
+            <SelectField field="district" selected="True" rename="Municipality" />
+            <SelectField field="Country" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="41">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="-430.59420289855086" y="1024.8985507246377" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>Sweden Net income by municipalities 2020</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <File OutputFileName="" RecordLimit="0" SearchSubDirs="False" FileFormat="25">72b7de04-b4ea-4179-8e09-719a6a62a542|||`net income 2020$`</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="43">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="-308.0909090909091" y="911.5151515151515" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>post_code = Replace([post_code], " ", "")</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Replace([post_code], &quot; &quot;, &quot;&quot;)" value="" field="post_code" type="V_String" size="255" />
+          </FormulaFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="44">
+      <EngineSettings Macro="Cleanse.yxmc" />
+      <GuiSettings Plugin="Cleanse.yxmc">
+        <Position x="100.17647058823525" y="1025.9411764705883" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Value name="Check Box (135)">True</Value>
+          <Value name="Check Box (136)">True</Value>
+          <Value name="List Box (11)">"Municipality","Net Income SEK","F3","F4","F5","F6","Average net income"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">True</Value>
+          <Value name="Check Box (122)">True</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="45">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="237.17647058823525" y="1025.9411764705883" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Municipality" selected="True" />
+            <SelectField field="Net Income SEK" selected="True" rename="Income pre-tax mean" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="46">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="363.86956521739125" y="1025" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>Income pre-tax mean = [Income pre-tax mean]*0.68
+Capital = "Stockholm"</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Income pre-tax mean]*0.68" value="" field="Income pre-tax mean" type="Double" size="8" />
+            <FormulaField expression="&quot;Stockholm&quot;" value="" field="Capital" type="V_WString" size="1073741823" />
+          </FormulaFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="48">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="-441.3188405797102" y="1375" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>Oslo total income and income after tax06944.xlsm - InntSkatt</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <File OutputFileName="" RecordLimit="0" SearchSubDirs="False" FileFormat="25">49e57197-a3f7-440d-9018-185112d9f0c3|||`Sheet1$`</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="49">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="232.9411764705883" y="1375.2941176470588" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Total income median (NOK)" selected="True" rename="Income pre-tax mean" type="Double" size="8" />
+            <SelectField field="Income after taxes median (NOK)" selected="True" rename="mean disposable income" type="Double" size="8" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="50">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="-436.6279069767441" y="1280.5813953488373" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>Municipalities_oslo</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <File OutputFileName="" RecordLimit="0" SearchSubDirs="False" FileFormat="25">ce3bd40b-59e3-43d9-adcd-9f318bf0ed18|||`district_matrix$`</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="51">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="-221.6279069767441" y="1280.5813953488373" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="52">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="-218.97674418604646" y="1165.0232558139535" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="53">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="-98.05882352941171" y="1208.2941176470588" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Post_code" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="post_code" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_F1" selected="True" input="Left_" />
+                <SelectField field="Left_hotel_name" selected="True" input="Left_" />
+                <SelectField field="Left_google_rating" selected="True" input="Left_" />
+                <SelectField field="Left_hotel_star_rating" selected="True" input="Left_" />
+                <SelectField field="Left_lon" selected="True" input="Left_" />
+                <SelectField field="Left_lat" selected="True" input="Left_" />
+                <SelectField field="Left_adress" selected="True" input="Left_" />
+                <SelectField field="Left_check_in" selected="True" input="Left_" />
+                <SelectField field="Left_pricing" selected="True" input="Left_" />
+                <SelectField field="Left_highlights" selected="True" input="Left_" />
+                <SelectField field="Left_website" selected="True" input="Left_" />
+                <SelectField field="Left_phone" selected="True" input="Left_" />
+                <SelectField field="Left_location_rating" selected="True" input="Left_" />
+                <SelectField field="Left_deteiled_google_reviews" selected="True" input="Left_" />
+                <SelectField field="Left_hotel_description" selected="True" input="Left_" />
+                <SelectField field="Left_attributes" selected="True" input="Left_" />
+                <SelectField field="Left_search_string" selected="True" input="Left_" />
+                <SelectField field="Left_Post_code" selected="True" input="Left_" />
+                <SelectField field="Right_post_code" selected="False" rename="Right_post_code" input="Right_" />
+                <SelectField field="Right_district" selected="True" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="54">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="145.9411764705883" y="1208.2941176470588" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>Capital = "Oslo"</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="&quot;Oslo&quot;" value="" field="Capital" type="V_WString" size="1073741823" />
+          </FormulaFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="55">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="-331.97674418604646" y="1164.0232558139535" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Field>adress</Field>
+          <RegExExpression value="(\d{4})" />
+          <CaseInsensitve value="True" />
+          <Method>ParseComplex</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="False" />
+            <RootName>adress</RootName>
+            <NumFields value="3" />
+            <ErrorHandling>Warn</ErrorHandling>
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="Post_code" type="V_String" size="255" />
+          </ParseComplex>
+          <Match>
+            <Field>adress_Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="56">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="43.94117647058829" y="1208.2941176470588" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Field>district</Field>
+          <RegExExpression value="([^\s]+)" />
+          <CaseInsensitve value="True" />
+          <Method>ParseComplex</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="False" />
+            <RootName>district</RootName>
+            <NumFields value="3" />
+            <ErrorHandling>Warn</ErrorHandling>
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="municipality_final" type="V_String" size="255" />
+          </ParseComplex>
+          <Match>
+            <Field>district_Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="57">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="496" y="1254.578947368421" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Capital" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Capital" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Capital" selected="True" rename="Right_Capital" input="Right_" />
+                <SelectField field="Right_Country" selected="False" rename="Right_Country" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="58">
+      <EngineSettings Macro="Cleanse.yxmc" />
+      <GuiSettings Plugin="Cleanse.yxmc">
+        <Position x="234.9411764705883" y="1208.2941176470588" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"F1","hotel_name","google_rating","hotel_star_rating","lon","lat","adress","check_in","pricing","highlights","website","phone","location_rating","deteiled_google_reviews","hotel_description","attributes","search_string","prices2","prices3","prices4","prices5","prices6","prices7","Resturant","Free Wifi","Handicap-friendly","Breakfast","Pool","Allows Pets","Climate Control","Fitness Center","check_in1","check_in2","Post_code","district","RegExOut1","Country"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">True</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="59">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="345.9411764705883" y="1208.2941176470588" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="F1" selected="True" />
+            <SelectField field="hotel_name" selected="True" />
+            <SelectField field="google_rating" selected="True" />
+            <SelectField field="hotel_star_rating" selected="True" />
+            <SelectField field="lon" selected="True" />
+            <SelectField field="lat" selected="True" />
+            <SelectField field="adress" selected="True" />
+            <SelectField field="check_in" selected="True" />
+            <SelectField field="pricing" selected="True" />
+            <SelectField field="highlights" selected="True" />
+            <SelectField field="website" selected="True" />
+            <SelectField field="phone" selected="True" />
+            <SelectField field="location_rating" selected="True" />
+            <SelectField field="deteiled_google_reviews" selected="True" />
+            <SelectField field="hotel_description" selected="True" />
+            <SelectField field="attributes" selected="True" />
+            <SelectField field="search_string" selected="True" />
+            <SelectField field="Post_code" selected="True" />
+            <SelectField field="district" selected="True" description="Municipality" />
+            <SelectField field="Capital" selected="True" />
+            <SelectField field="Country" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="61">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="344.9411764705883" y="1375.2941176470588" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>Capital = "Oslo"
+Income pre-tax mean = [Income pre-tax mean]*0.72
+mean disposabl...</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="&quot;Oslo&quot;" value="" field="Capital" type="V_WString" size="1073741823" />
+            <FormulaField expression="[Income pre-tax mean]*0.72" value="" field="Income pre-tax mean" type="V_WString" size="255" />
+            <FormulaField expression="[mean disposable income]*0.72" value="" field="mean disposable income" type="Double" size="8" />
+          </FormulaFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="62">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="121.94117647058829" y="1375.2941176470588" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>Total income median (NOK) = Replace([Total income median (NOK)], " ", "")
+Income...</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Replace([Total income median (NOK)], &quot; &quot;, &quot;&quot;)" value="" field="Total income median (NOK)" type="V_String" size="255" />
+            <FormulaField expression="Replace([Income after taxes median (NOK)], &quot; &quot;, &quot;&quot;)" value="" field="Income after taxes median (NOK)" type="V_String" size="255" />
+          </FormulaFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="64">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="596" y="502.57894736842104" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Right_Municipality" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="65">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="610" y="901.578947368421" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Right_Municipality" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="66">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="609" y="1254.578947368421" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="district" selected="True" rename="Municipality" description="" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="67">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="599" y="173.57894736842107" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="district" selected="False" />
+            <SelectField field="median disposable income" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="68">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="-432.97674418604646" y="1163.0232558139535" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File OutputFileName="" RecordLimit="0" SearchSubDirs="False" FileFormat="25">36d390ee-06a9-4bce-9296-dce0a9b51d2b|||`Sheet1$`</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>datalist_oslo</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="69">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="811.7179487179485" y="700" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Mode>ByName</Mode>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="70">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1052.7179487179485" y="700" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="lon" selected="True" rename="lat" />
+            <SelectField field="lat" selected="True" rename="lon" />
+            <SelectField field="Income pre-tax mean" selected="True" type="V_WString" forced="True" size="254" />
+            <SelectField field="mean disposable income" selected="False" />
+            <SelectField field="Right_Capital" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="71">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1171.7179487179485" y="700" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>data_cleaned1.xlsx
+Query=Sheet1</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <File MaxRecords="" FileFormat="25">data_cleaned1.xlsx|||Sheet1</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <Delimeter>,</Delimeter>
+            <HeaderRow>True</HeaderRow>
+            <ForceQuotes>False</ForceQuotes>
+            <CodePage>65001</CodePage>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <WriteBOM>True</WriteBOM>
+            <OutputOption>Create</OutputOption>
+            <SkipFieldNames>False</SkipFieldNames>
+            <PreserveFormat>False</PreserveFormat>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="72">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="297" y="611.578947368421" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>Capital = "Copenhagen"</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="&quot;Copenhagen&quot;" value="" field="Capital" type="V_WString" size="1073741823" />
+          </FormulaFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="75">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="929.7179487179485" y="700" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>Income pre-tax mean = Replace([Income pre-tax mean], ",",".")</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Replace([Income pre-tax mean], &quot;,&quot;,&quot;.&quot;)" value="" field="Income pre-tax mean" type="V_WString" size="254" />
+          </FormulaFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="47">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="-422" y="783" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File OutputFileName="" RecordLimit="0" SearchSubDirs="False" FileFormat="25">37aa593a-1f72-458c-bdd4-f84598794ca8|||`Sheet1$`</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>datalist_stockholm</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="42">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="-343" y="782" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>adress1 = [adress]
+adress1 = Replace([adress]," ", "")</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[adress]" value="" field="adress1" type="V_String" size="255" />
+            <FormulaField expression="Replace([adress],&quot; &quot;, &quot;&quot;)" value="" field="adress1" type="V_String" size="255" />
+          </FormulaFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="38">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="-265" y="782" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Field>adress1</Field>
+          <RegExExpression value="(\d{5})" />
+          <CaseInsensitve value="True" />
+          <Method>ParseComplex</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="False" />
+            <RootName>adress1</RootName>
+            <NumFields value="3" />
+            <ErrorHandling>Warn</ErrorHandling>
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="Post_code" type="V_String" size="255" />
+          </ParseComplex>
+          <Match>
+            <Field>adress1_Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="77">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position height="38" width="67" x="-456" y="-14" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <AnnotationText />
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FillColor name="#050505" />
+          <Font name="Lato, Arial, sans-serif" size="7" style="0" />
+          <Justification Justification="0" />
+          <Shape shape="0" />
+          <Text>Extract</Text>
+          <TextColor name="#f7fcfb" />
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="78">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position height="36" width="1071" x="-386" y="-13" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <AnnotationText />
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FillColor name="#3b3a3a" />
+          <Font name="Lato, Arial, sans-serif" size="7" style="0" />
+          <Justification Justification="1" />
+          <Shape shape="0" />
+          <Text>Transform</Text>
+          <TextColor name="#f4f8f8" />
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="79">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position height="36" width="334" x="747.7179487179485" y="571" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <AnnotationText />
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FillColor name="#3b3a3a" />
+          <Font name="Lato, Arial, sans-serif" size="7" style="0" />
+          <Justification Justification="1" />
+          <Shape shape="0" />
+          <Text>Transform</Text>
+          <TextColor name="#f4f8f8" />
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="80">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position height="36" width="108" x="1085.7179487179485" y="571" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <AnnotationText />
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FillColor name="#3b3a3a" />
+          <Font name="Lato, Arial, sans-serif" size="7" style="0" />
+          <Justification Justification="1" />
+          <Shape shape="0" />
+          <Text>Load</Text>
+          <TextColor name="#f4f8f8" />
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="81">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position height="38" width="72" x="-460" y="31" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <AnnotationText />
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FillColor name="#adacac" />
+          <Font name="Lato, Arial, sans-serif" size="8" style="0" />
+          <Justification Justification="1" />
+          <Shape shape="0" />
+          <Text>Load data</Text>
+          <TextColor name="#0c0c0c" />
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="82">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position height="38" width="351" x="-384" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <AnnotationText />
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FillColor name="#adacac" />
+          <Font name="Lato, Arial, sans-serif" size="8" style="0" />
+          <Justification Justification="1" />
+          <Shape shape="0" />
+          <Text><![CDATA[ Merging municipality on postcode]]></Text>
+          <TextColor name="#0c0c0c" />
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="83">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position height="38" width="715" x="-29" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <AnnotationText />
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FillColor name="#adacac" />
+          <Font name="Lato, Arial, sans-serif" size="8" style="0" />
+          <Justification Justification="1" />
+          <Shape shape="0" />
+          <Text>Merging economic data on municipality</Text>
+          <TextColor name="#0c0c0c" />
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="84">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position height="38" width="331" x="749.7179487179485" y="611" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <AnnotationText />
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FillColor name="#adacac" />
+          <Font name="Lato, Arial, sans-serif" size="8" style="0" />
+          <Justification Justification="1" />
+          <Shape shape="0" />
+          <Text>Union of the four cities selecting columns</Text>
+          <TextColor name="#0c0c0c" />
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="85">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position height="38" width="109" x="1085.7179487179485" y="611" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <AnnotationText />
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FillColor name="#adacac" />
+          <Font name="Lato, Arial, sans-serif" size="8" style="0" />
+          <Justification Justification="1" />
+          <Shape shape="0" />
+          <Text>Export as excel file</Text>
+          <TextColor name="#0c0c0c" />
+        </Configuration>
+      </Properties>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="11" Connection="Output26" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="10" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="11" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Join" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="6" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output26" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="26" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output26" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Output" />
+      <Destination ToolID="25" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="27" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Join" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="21" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="21" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Output" />
+      <Destination ToolID="39" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="Output" />
+      <Destination ToolID="46" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="46" Connection="Output" />
+      <Destination ToolID="39" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="Output26" />
+      <Destination ToolID="45" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="44" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="Join" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="Output" />
+      <Destination ToolID="36" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="36" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="47" Connection="Output" />
+      <Destination ToolID="42" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="Output" />
+      <Destination ToolID="49" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="62" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="61" Connection="Output" />
+      <Destination ToolID="57" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="49" Connection="Output" />
+      <Destination ToolID="61" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="58" Connection="Output26" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="59" Connection="Output" />
+      <Destination ToolID="57" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Output" />
+      <Destination ToolID="58" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Join" />
+      <Destination ToolID="56" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="Output" />
+      <Destination ToolID="52" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output" />
+      <Destination ToolID="53" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Output" />
+      <Destination ToolID="53" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Join" />
+      <Destination ToolID="64" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Join" />
+      <Destination ToolID="65" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="57" Connection="Join" />
+      <Destination ToolID="66" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Join" />
+      <Destination ToolID="67" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="68" Connection="Output" />
+      <Destination ToolID="55" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="66" Connection="Output" />
+      <Destination ToolID="69" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="65" Connection="Output" />
+      <Destination ToolID="69" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="64" Connection="Output" />
+      <Destination ToolID="69" Connection="Input" />
+    </Connection>
+    <Connection name="#4">
+      <Origin ToolID="67" Connection="Output" />
+      <Destination ToolID="69" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="72" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="72" Connection="Output" />
+      <Destination ToolID="25" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="10" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="75" Connection="Output" />
+      <Destination ToolID="70" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="69" Connection="Output" />
+      <Destination ToolID="75" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="70" Connection="Output" />
+      <Destination ToolID="71" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Annotation includeToolName="False" on="True" />
+    <CancelOnError value="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <DisableAllOutput value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <Events>
+      <Enabled value="True" />
+    </Events>
+    <GlobalRecordLimit value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Memory default="True" />
+    <MetaInfo>
+      <Author />
+      <CategoryName />
+      <Company />
+      <Copyright />
+      <Description />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <Name>data_cleaning_Intermediate</Name>
+      <NameIsFileName value="True" />
+      <RootToolName />
+      <SearchTags />
+      <Telemetry>
+        <PreviousWorkflowId value="0d1047ae-7904-4f96-b565-36655ae91936" />
+        <OriginWorkflowId value="6e9ee8ea-172a-49b9-b666-d2ac02678674" />
+      </Telemetry>
+      <ToolInDb value="False" />
+      <ToolVersion />
+      <WorkflowId value="b97ddba9-a33b-444a-a1e6-089515807a68" />
+    </MetaInfo>
+    <RunWithE2 value="True" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <TempFiles default="True" />
+    <ZoomLevel value="0" />
+  </Properties>
+</AlteryxDocument>
